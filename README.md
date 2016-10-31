@@ -28,7 +28,7 @@ rectangle system {
 ![Class Diagram](http://localhost:8080/uml?script=
 @startuml;
 skinparam monochrome true;
-namespace alpha {
+package alpha {
   class A{
     length:double;
     doit():void;
@@ -36,10 +36,10 @@ namespace alpha {
   class B;
   class C;
   A <|-- B;
-  B o-- D;
+  B o--"dees\\n0..n" D:knows >;
   D *-- C;
 }
-namespace beta {
+package beta {
   class D;
   interface E{
     notify(event:Event):void;
