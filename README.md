@@ -6,7 +6,7 @@ Build and Start the server:
 
     $ mvn spring-boot:run
 
-Then if you open this README-file in a Markdown editor, an UML image shall appear between the horizontal lines below, when this page is reloaded:
+Then if you open this README-file in a Markdown editor, like [MacDown](http://macdown.uranusjr.com/), an UML image shall appear between the horizontal lines below, when this page is reloaded:
 
 * * *
 
