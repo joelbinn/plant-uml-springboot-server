@@ -44,7 +44,7 @@
                     <images>
                         <image>
                             <alias>plant-uml</alias>
-                            <name>joelbinn/plant-uml-springboot-server:${project.version}</name>
+                            <name>plant-uml-server:${project.version}</name>
                             <build>
                                 <from>openjdk:8</from>
                                 <assembly>
@@ -60,27 +60,10 @@
                                 </runCmds>
                                 <entryPoint>java -jar /maven/${project.build.finalName}.jar</entryPoint>
                             </build>
-
-                            <run>
-                                <ports>
-                                    <port>tomcat.port:8080</port>
-                                </ports>
-                                <!-- <wait>
-                                    <http>
-                                        <url>http://localhost:${tomcat.port}/ping</url>
-                                    </http>
-                                    <time>10000</time>
-                                </wait> -->
-                            </run>
                         </image>
                     </images>
                 </configuration>
             </plugin>
-            <!-- <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>fabric8-maven-plugin</artifactId>
-                <version>3.1.81</version>
-            </plugin> -->
         </plugins>
     </build>
 
