@@ -66,6 +66,6 @@ It is possible to build a docker image with graphviz and server packaged:
     $ mvn clean package docker:build
     $ docker run -d --name plant-uml -p 19180:8080 plant-uml-springboot-server:1.0.0
 
-Or just start the docker image:
+Or just start the docker image available at `docker.io`:
 
     $ docker run -d --name plant-uml -p 19180:8080 joelbinn/plant-uml-springboot-server:1.0.0
