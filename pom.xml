@@ -44,7 +44,7 @@
                     <images>
                         <image>
                             <alias>plant-uml</alias>
-                            <name>joelabs/plant-uml-springboot-server:${project.version}</name>
+                            <name>joelbinn/plant-uml-springboot-server:${project.version}</name>
                             <build>
                                 <from>openjdk:8</from>
                                 <assembly>
