@@ -54,6 +54,14 @@ package beta {
 
 * * *
 
-See [PlantUML](http://plantuml.com/) for more information about syntax. 
+See [PlantUML](http://plantuml.com/) for more information about syntax.
 
 **Note**: a difference compared to vanilla PlantUML syntax is that each line must be terminated with the character ___;___
+
+
+Docker
+------
+It is possible to build a docker image:
+
+  $ mvn clean package docker:build
+  $ docker run -d --name plant-uml -p 19180:8080 joelabs/plant-uml-springboot-server:1.0.0

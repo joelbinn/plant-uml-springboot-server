@@ -16,8 +16,16 @@ import java.io.IOException;
 @RestController
 public class PlantUMLServerController {
   @ResponseBody
+  @RequestMapping(value = "/ping", method = RequestMethod.GET)
+  public String ping() throws IOException {
+    System.out.println("Ping");
+    return "OK!";
+  }
+
+  @ResponseBody
   @RequestMapping(value = "/uml", method = RequestMethod.GET, produces = MediaType.IMAGE_PNG_VALUE)
   public byte[] generateImageFromUmlScript(@RequestParam(value = "script", defaultValue = "@startuml;actor Kaka;@enduml") String script) throws IOException {
+    System.out.println("Generate UML for: "+script);
     SourceStringReader reader = new SourceStringReader(script.replace(';','\n'));
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
     reader.generateImage(bos, new FileFormatOption(FileFormat.PNG, false));
